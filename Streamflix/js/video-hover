@@ -1,0 +1,27 @@
+// Initialize video hover effects
+function initVideoHoverEffects() {
+    document.querySelectorAll('.video-card').forEach(card => {
+        card.addEventListener('mouseenter', function() {
+            const video = this.querySelector('video');
+            if (video) video.play();
+        });
+        
+        card.addEventListener('mouseleave', function() {
+            const video = this.querySelector('video');
+            if (video) {
+                video.pause();
+                video.currentTime = 0;
+            }
+        });
+    });
+}
+
+// Wait for DOM to be fully loaded
+document.addEventListener('DOMContentLoaded', function() {
+    initVideoHoverEffects();
+});
+
+// Also make the function available for dynamic content loading
+window.videoHover = {
+    init: initVideoHoverEffects
+};

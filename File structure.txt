@@ -1,0 +1,90 @@
+streamflix/
+├── index.html          (main content page - after login)
+├── welcome.html        (pre-login landing page)
+├── auth.html           (combined login/signup page)
+├── css/
+│   └── style.css       (custom styles)
+└── js/
+    ├── auth.js         (authentication logic)
+    └── theme-toggle.js (theme switching)
+
+File Relationships & Flow
+User Journey:
+
+Landing Page: index.html → CTA buttons link to auth.html (for login/signup).
+
+Auth Page: auth.html → Validates credentials → Redirects to home.html on success.
+
+Main App: home.html (protected content).
+
+Shared Assets:
+
+CSS: style.css styles all pages consistently.
+
+JS:
+
+auth.js handles form validation and redirects.
+
+theme-toggle.js manages UI themes (if enabled).
+
+Key Features in Each File
+1. index.html (Landing Page)
+Hero section with call-to-action.
+
+"Sign In" button → auth.html?action=login.
+
+Email signup → auth.html?action=signup.
+
+2. auth.html (Login/Signup)
+Dynamic form switching (login ↔ signup) via URL params:
+
+auth.html?action=login
+
+auth.html?action=signup
+
+Form validation via auth.js.
+
+Redirects to home.html on success.
+
+3. home.html (Main Content)
+Netflix-style UI with:
+
+Navigation bar (with logout option).
+
+Hero banner.
+
+Content rows (Popular, Continue Watching, etc.).
+
+Protected access (requires auth).
+
+4. css/style.css
+Shared styles for all pages:
+
+Netflix-inspired dark theme.
+
+Responsive layouts (Bootstrap 5 + custom media queries).
+
+Animations (e.g., hover effects on cards).
+
+5. js/auth.js
+Manages:
+
+Login/signup form validation.
+
+LocalStorage authentication state (isAuthenticated flag).
+
+Redirects to home.html after login.
+
+6. js/theme-toggle.js (Optional)
+Toggles dark/light mode.
+
+Saves preference in localStorage.
+
+How to Deploy
+Place all files in the above structure.
+
+Ensure all paths in HTML/CSS/JS are correct (e.g., href="auth.html").
+
+Test the flow:
+
+Open index.html → Click "Sign In" → auth.html → Login → home.html.
