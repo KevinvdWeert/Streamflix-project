@@ -12,6 +12,10 @@ body.light-theme {
     color: #000000;
 }
 
+body, header, footer, nav {
+    transition: background-color 0.5s, color 0.5s;
+}
+
 header {
     background-color: #333;
     color: #fff;
