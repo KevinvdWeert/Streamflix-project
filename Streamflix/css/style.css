@@ -1,124 +1,48 @@
-/* Styles for Streamflix project */
-
 body {
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #141414;
-    color: #e5e5e5;
-}
-
-body.light-theme {
-    background-color: #ffffff;
-    color: #000000;
-}
-
-body, header, footer, nav {
-    transition: background-color 0.5s, color 0.5s;
-}
-
-header {
-    background-color: #141414;
-    color: #fff;
-    padding: 20px 0;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-header.light-theme, footer.light-theme {
-    background-color: #ffffff;
-    color: #000000;
-}
-
-nav {
+    min-height: 100vh;
     display: flex;
-    justify-content: center;
-    background-color: #141414;
-    padding: 10px 0;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-nav.light-theme {
-    background-color: #f8f9fa;
-}
-
-nav a {
-    color: #fff;
-    padding: 14px 20px;
-    text-decoration: none;
-    text-align: center;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-nav.light-theme a {
-    color: #000000;
-}
-
-nav a:hover {
-    background-color: #555;
-    color: #fff;
-}
-
-nav.light-theme a:hover {
-    background-color: #e2e6ea;
-    color: #000;
-}
-
-.container {
-    padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-footer {
-    background-color: #141414;
-    color: #fff;
-    text-align: center;
-    padding: 20px 0;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.hero-section {
-    background: url('hero-background.jpg') no-repeat center center/cover;
-    height: 60vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     flex-direction: column;
-    text-align: center;
-    color: #fff;
-    padding: 20px;
-    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
-.hero-section .hero-content {
-    background: rgba(0, 0, 0, 0.5);
-    padding: 20px;
-    border-radius: 10px;
-    max-width: 600px;
-    width: 100%;
+main {
+    flex: 1;
 }
 
-.popular-content .row {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
+.card {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 
-.popular-content .row .col-md-3 {
-    flex: 1 1 calc(25% - 20px);
-    margin-bottom: 20px;
+.form-control.bg-secondary {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-.popular-content img {
-    width: 100%;
-    border-radius: 10px;
-    transition: transform 0.3s;
+.form-control:focus {
+    background-color: rgba(255, 255, 255, 0.2) !important;
+    color: white;
+    border-color: #dc3545;
+    box-shadow: 0 0 0 0.25rem rgba(220, 53, 69, 0.25);
 }
 
-.popular-content img:hover {
-    transform: scale(1.05);
+.btn-danger {
+    background-color: #e50914;
+    border-color: #e50914;
+}
+
+.btn-danger:hover {
+    background-color: #c40812;
+    border-color: #c40812;
+}
+
+a.text-danger {
+    color: #e50914 !important;
+}
+
+a.text-danger:hover {
+    color: #c40812 !important;
+}
+
+body, .card, .form-control {
+    transition: background-color 0.3s ease, border-color 0.3s ease;
 }
