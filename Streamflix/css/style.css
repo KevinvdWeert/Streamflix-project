@@ -7,6 +7,11 @@ body {
     background-color: #f4f4f4;
 }
 
+body.light-theme {
+    background-color: #ffffff;
+    color: #000000;
+}
+
 header {
     background-color: #333;
     color: #fff;
@@ -14,10 +19,19 @@ header {
     text-align: center;
 }
 
+header.light-theme, footer.light-theme {
+    background-color: #ffffff;
+    color: #000000;
+}
+
 nav {
     display: flex;
     justify-content: center;
     background-color: #444;
+}
+
+nav.light-theme {
+    background-color: #f8f9fa;
 }
 
 nav a {
@@ -27,8 +41,16 @@ nav a {
     text-align: center;
 }
 
+nav.light-theme a {
+    color: #000000;
+}
+
 nav a:hover {
     background-color: #555;
+}
+
+nav.light-theme a:hover {
+    background-color: #e2e6ea;
 }
 
 .container {
