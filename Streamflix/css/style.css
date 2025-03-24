@@ -1,10 +1,11 @@
 /* Styles for Streamflix project */
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
+    color: #333;
 }
 
 body.light-theme {
@@ -19,8 +20,9 @@ body, header, footer, nav {
 header {
     background-color: #333;
     color: #fff;
-    padding: 10px 0;
+    padding: 20px 0;
     text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 header.light-theme, footer.light-theme {
@@ -32,6 +34,8 @@ nav {
     display: flex;
     justify-content: center;
     background-color: #444;
+    padding: 10px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 nav.light-theme {
@@ -43,6 +47,7 @@ nav a {
     padding: 14px 20px;
     text-decoration: none;
     text-align: center;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 nav.light-theme a {
@@ -51,24 +56,29 @@ nav.light-theme a {
 
 nav a:hover {
     background-color: #555;
+    color: #fff;
 }
 
 nav.light-theme a:hover {
     background-color: #e2e6ea;
+    color: #000;
 }
 
 .container {
     padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 footer {
     background-color: #333;
     color: #fff;
     text-align: center;
-    padding: 10px 0;
+    padding: 20px 0;
     position: fixed;
     width: 100%;
     bottom: 0;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .hero-section {
@@ -78,24 +88,37 @@ footer {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    text-align: center;
+    color: #fff;
+    padding: 20px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .hero-section .hero-content {
     background: rgba(0, 0, 0, 0.5);
     padding: 20px;
     border-radius: 10px;
+    max-width: 600px;
+    width: 100%;
 }
 
 .popular-content .row {
     display: flex;
     flex-wrap: wrap;
+    gap: 20px;
 }
 
 .popular-content .row .col-md-3 {
+    flex: 1 1 calc(25% - 20px);
     margin-bottom: 20px;
 }
 
 .popular-content img {
     width: 100%;
     border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.popular-content img:hover {
+    transform: scale(1.05);
 }
