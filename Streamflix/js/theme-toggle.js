@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Check for saved theme preference
     const currentTheme = localStorage.getItem('streamflixTheme') || 'dark';
     document.body.classList.add(`bg-${currentTheme}`);
+    document.body.classList.add(currentTheme === 'dark' ? 'text-white' : 'text-black');
     
     // Update button icon
     if (icon) {

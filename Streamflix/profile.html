@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="bg-black">
+<body class="bg-black text-white">
     <nav class="navbar navbar-expand-lg navbar-dark bg-black bg-gradient py-3">
         <div class="container">
             <a class="navbar-brand" href="home.html">
@@ -16,73 +16,55 @@
             </a>
             <div class="d-flex align-items-center">
                 <a href="home.html" class="btn btn-outline-light me-2">Back to Home</a>
-                <button id="theme-toggle" class="btn btn-dark">
-                    <i class="fas fa-moon"></i>
-                </button>
             </div>
         </div>
     </nav>
 
-    <main class="container py-5 text-white">
-        <div class="row">
-            <div class="col-md-4 mb-4">
-                <div class="card bg-dark text-center p-4">
-                    <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" 
-                         class="rounded-circle mx-auto mb-3" width="150" height="150" id="profile-avatar">
-                    <h3 id="profile-name">Loading...</h3>
-                    <p id="profile-email" class="text-muted">user@example.com</p>
-                    <button class="btn btn-outline-light w-100 mb-2" data-bs-toggle="modal" data-bs-target="#editProfileModal">
-                        <i class="fas fa-edit me-2"></i>Edit Profile
-                    </button>
-                    <button id="signout-btn" class="btn btn-outline-danger w-100">
-                        <i class="fas fa-sign-out-alt me-2"></i>Sign Out
-                    </button>
-                </div>
-            </div>
-            <div class="col-md-8">
-                <h2 class="mb-4"><i class="fas fa-heart text-danger me-2"></i>My Watchlist</h2>
-                <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 g-3" id="watchlist">
-                    <!-- Dynamically loaded -->
-                    <div class="col text-center py-5">
-                        <div class="spinner-border text-danger"></div>
-                        <p class="mt-3">Loading your watchlist...</p>
+    <main class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card bg-dark p-4">
+                    <h2 class="text-center mb-4">Your Profile</h2>
+                    <div id="profileInfo">
+                        <div class="text-center mb-4">
+                            <i class="fas fa-user-circle fa-5x"></i>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Name</label>
+                            <input type="text" class="form-control bg-secondary text-white" id="profileName" readonly>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Email</label>
+                            <input type="email" class="form-control bg-secondary text-white" id="profileEmail" readonly>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Member Since</label>
+                            <input type="text" class="form-control bg-secondary text-white" id="memberSince" readonly>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </main>
 
-    <!-- Edit Profile Modal -->
-    <div class="modal fade" id="editProfileModal" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content bg-dark text-white">
-                <div class="modal-header border-secondary">
-                    <h5 class="modal-title">Edit Profile</h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <form id="profileForm">
-                        <div class="mb-3">
-                            <label class="form-label">Profile Picture</label>
-                            <input type="file" class="form-control bg-secondary" id="avatarUpload">
-                        </div>
-                        <div class="mb-3">
-                            <label class="form-label">Display Name</label>
-                            <input type="text" class="form-control bg-secondary" id="displayName">
-                        </div>
-                        <button type="submit" class="btn btn-danger w-100">Save Changes</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-app-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-auth-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-firestore-compat.js"></script>
-    <script src="js/firebase.js"></script>
-    <script src="js/profile.js"></script>
-    <script src="js/theme-toggle.js"></script>
+    <script src="js/auth.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const user = JSON.parse(sessionStorage.getItem('current_user'));
+            if (!user) {
+                window.location.href = 'index.html';
+                return;
+            }
+            
+            const users = JSON.parse(localStorage.getItem('streamflix_users') || '[]');
+            const userData = users.find(u => u.email === user.email);
+            
+            if (userData) {
+                document.getElementById('profileName').value = userData.name;
+                document.getElementById('profileEmail').value = userData.email;
+                document.getElementById('memberSince').value = new Date(userData.joined).toLocaleDateString();
+            }
+        });
+    </script>
 </body>
 </html>

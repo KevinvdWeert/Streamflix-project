@@ -1,7 +1,6 @@
 // Initialize home page functionality
 document.addEventListener('DOMContentLoaded', function() {
-    // Check authentication
-    const user = firebase.auth().currentUser;
+    const user = JSON.parse(sessionStorage.getItem('current_user'));
     if (!user) {
         window.location.href = 'index.html';
         return;

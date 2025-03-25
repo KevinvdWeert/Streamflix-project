@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - Streamflix</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-black text-white">
+    <nav class="navbar navbar-dark bg-black bg-gradient py-3">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" height="40" alt="Streamflix">
+            </a>
+            <h1 class="text-danger">Admin Panel</h1>
+        </div>
+    </nav>
+
+    <main class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card bg-dark p-4">
+                    <h2 class="text-center mb-4">User Database</h2>
+                    <div class="mb-4">
+                        <input type="password" class="form-control mb-3" id="adminKey" placeholder="Enter admin key">
+                        <button class="btn btn-danger" id="viewUsers">View Users</button>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table table-dark" id="usersTable" style="display:none">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Email</th>
+                                    <th>Joined</th>
+                                </tr>
+                            </thead>
+                            <tbody id="usersTableBody"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/auth.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const ADMIN_KEY = "streamflix_admin_123"; // Change this in production
+            
+            document.getElementById('viewUsers').addEventListener('click', function() {
+                if (document.getElementById('adminKey').value === ADMIN_KEY) {
+                    const users = JSON.parse(localStorage.getItem('streamflix_users') || '[]');
+                    const tableBody = document.getElementById('usersTableBody');
+                    tableBody.innerHTML = '';
+                    
+                    users.forEach(user => {
+                        const row = document.createElement('tr');
+                        row.innerHTML = `
+                            <td>${user.name}</td>
+                            <td>${user.email}</td>
+                            <td>${new Date(user.joined).toLocaleDateString()}</td>
+                        `;
+                        tableBody.appendChild(row);
+                    });
+                    
+                    document.getElementById('usersTable').style.display = 'table';
+                } else {
+                    alert('Invalid admin key');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
