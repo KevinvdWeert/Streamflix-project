@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Streamflix - Unlimited Movies</title>
+    <title>Streamflix - Onbeperkt series en films kijken</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
@@ -17,50 +17,26 @@
                 <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" height="40" alt="Streamflix">
             </a>
             <div>
-                <a href="auth.html?action=login" class="btn btn-danger">Sign In</a>
+                <a href="auth.html?action=login" class="btn btn-danger">Aanmelden</a>
             </div>
         </div>
     </nav>
 
     <main class="container text-center text-white hero-content">
-        <h1 class="display-3 fw-bold mb-4">Unlimited movies, TV shows, and more.</h1>
-        <p class="h4 mb-5">Watch anywhere. Cancel anytime.</p>
-        <p class="h5 mb-4">Ready to watch? Enter your email to create or restart your membership.</p>
+        <h1 class="display-3 fw-bold mb-4">Onbeperkt series, films en nog veel meer kijken</h1>
+        <p class="h4 mb-5">Vanaf € 8,99. Je kunt altijd opzeggen.</p>
+        <p class="h5 mb-4">Klaar om te kijken? Voer je e-mailadres in om je lidmaatschap te starten of te hernieuwen.</p>
         
         <div class="row justify-content-center">
             <div class="col-md-8 col-lg-6">
                 <div class="input-group mb-3">
-                    <input type="email" id="welcomeEmail" class="form-control form-control-lg" placeholder="Email address">
-                    <button class="btn btn-danger btn-lg" type="button" id="getStartedBtn">
-                        Get Started <i class="fas fa-chevron-right"></i>
-                    </button>
+                    <input type="email" class="form-control form-control-lg" placeholder="E-mailadres">
+                    <a href="auth.html" class="btn btn-danger btn-lg">
+                        Aan de slag <i class="fas fa-chevron-right"></i>
+                    </a>
                 </div>
             </div>
         </div>
     </main>
-
-    <script src="js/auth.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const getStartedBtn = document.getElementById('getStartedBtn');
-            if (getStartedBtn) {
-                getStartedBtn.addEventListener('click', function() {
-                    const emailInput = document.getElementById('welcomeEmail');
-                    if (!emailInput) {
-                        alert("Email input field is missing.");
-                        return;
-                    }
-
-                    const email = emailInput.value;
-                    if (email.includes('@')) {
-                        localStorage.setItem('temp_email', email);
-                        window.location.href = 'auth.html?action=signup';
-                    } else {
-                        alert('Please enter a valid email address');
-                    }
-                });
-            }
-        });
-    </script>
 </body>
 </html>

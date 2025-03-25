@@ -1,69 +1,71 @@
-/* Base Styles */
-body {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-}
-
-/* Backgrounds */
-.bg-black {
-    background-color: #141414;
-}
-
-/* Auth Pages */
-.welcome-page, .auth-page {
-    background: url('https://assets.nflxext.com/ffe/siteui/vlv3/5e16108c-fd30-46de-9bb8-0b4e1bbbc509/29d8d7d7-83cc-4b5f-aa9b-6fd4f68bfaa6/NL-en-20240205-popsignuptwoweeks-perspective_alpha_website_large.jpg') no-repeat center center/cover;
+/* Background with your image */
+.welcome-page {
+    background: url('../images/NL-nl-20250317-TRIFECTA-perspective_dd6c75eb-e52d-42ce-abe5-dd9a51c86911_large.jpg') no-repeat center center fixed;
+    background-size: cover;
     min-height: 100vh;
     position: relative;
 }
 
+/* Overlay */
 .hero-overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.5);
     background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.8) 100%);
 }
 
-.auth-card {
-    background-color: rgba(0, 0, 0, 0.75);
-    padding: 2rem;
-    border-radius: 4px;
+/* Content positioning */
+.hero-content {
+    position: relative;
+    z-index: 1;
+    padding-top: 10rem;
 }
 
-/* Forms */
+/* Form styling */
 .form-control {
-    background-color: #333;
-    border: none;
+    background-color: rgba(0, 0, 0, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.2);
     color: white;
-    height: 50px;
 }
 
 .form-control:focus {
-    background-color: #454545;
+    background-color: rgba(0, 0, 0, 0.8);
     color: white;
     box-shadow: none;
+    border-color: rgba(255, 255, 255, 0.4);
 }
 
-/* Buttons */
+/* Button styling */
 .btn-danger {
     background-color: #e50914;
     border-color: #e50914;
 }
 
 .btn-danger:hover {
-    background-color: #c40812;
-    border-color: #c40812;
+    background-color: #f40612;
+    border-color: #f40612;
 }
 
-/* Responsive */
+/* Responsive adjustments */
 @media (max-width: 768px) {
-    .navbar-nav {
-        margin-top: 1rem;
+    .hero-content {
+        padding-top: 5rem;
     }
     
-    .search-box {
-        margin-top: 1rem;
+    .display-3 {
+        font-size: 2.5rem;
+    }
+    
+    .input-group {
+        flex-direction: column;
+    }
+    
+    .input-group .form-control,
+    .input-group .btn {
         width: 100%;
+        margin-bottom: 10px;
     }
 }
