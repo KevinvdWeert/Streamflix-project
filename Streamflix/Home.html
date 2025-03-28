@@ -6,190 +6,7 @@
     <title>Streamflix - Home</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        :root {
-            --netflix-red: #e50914;
-            --netflix-dark: #141414;
-        }
-        
-        body {
-            background-color: var(--netflix-dark);
-            color: white;
-            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-        }
-        
-        .navbar {
-            background: linear-gradient(to bottom, rgba(0,0,0,0.7) 10%, rgba(0,0,0,0));
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 1000;
-            transition: background-color 0.4s;
-        }
-        
-        .navbar.scrolled {
-            background-color: var(--netflix-dark);
-        }
-        
-        .hero-banner {
-            height: 70vh;
-            background-size: cover;
-            background-position: center;
-            position: relative;
-            display: flex;
-            align-items: center;
-            margin-top: -68px;
-        }
-        
-        .hero-banner::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(to top, var(--netflix-dark) 0%, transparent 50%);
-        }
-        
-        .hero-content {
-            position: relative;
-            z-index: 1;
-            padding-left: 4rem;
-            max-width: 40%;
-        }
-        
-        .section-title {
-            font-weight: bold;
-            margin-bottom: 1rem;
-        }
-        
-        .row-container {
-            position: relative;
-            margin-bottom: 3rem;
-        }
-        
-        .row-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 1rem;
-        }
-        
-        .scroll-row {
-            display: flex;
-            overflow-x: auto;
-            overflow-y: hidden;
-            scroll-behavior: smooth;
-            padding: 1rem 0;
-            -ms-overflow-style: none;
-            scrollbar-width: none;
-        }
-        
-        .scroll-row::-webkit-scrollbar {
-            display: none;
-        }
-        
-        .movie-card {
-            flex: 0 0 auto;
-            width: 220px;
-            margin-right: 10px;
-            transition: transform 0.3s;
-            position: relative;
-        }
-        
-        .movie-card:hover {
-            transform: scale(1.1);
-            z-index: 10;
-        }
-        
-        .movie-card img {
-            border-radius: 4px;
-            width: 100%;
-            height: auto;
-        }
-        
-        .movie-card .card-body {
-            padding: 0.5rem;
-            opacity: 0;
-            transition: opacity 0.3s;
-            position: absolute;
-            bottom: 0;
-            background: rgba(0,0,0,0.7);
-            width: 100%;
-        }
-        
-        .movie-card:hover .card-body {
-            opacity: 1;
-        }
-        
-        .scroll-btn {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background: rgba(0,0,0,0.5);
-            border: none;
-            color: white;
-            width: 40px;
-            height: 100px;
-            z-index: 10;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-        }
-        
-        .scroll-btn.left {
-            left: 0;
-            border-radius: 0 4px 4px 0;
-        }
-        
-        .scroll-btn.right {
-            right: 0;
-            border-radius: 4px 0 0 4px;
-        }
-        
-        .scroll-btn:hover {
-            background: rgba(0,0,0,0.7);
-        }
-        
-        .genre-tag {
-            background-color: var(--netflix-red);
-            padding: 0.2rem 0.5rem;
-            border-radius: 3px;
-            font-size: 0.8rem;
-            margin-right: 0.5rem;
-        }
-        
-        .play-btn {
-            background-color: white;
-            color: black;
-            border: none;
-            padding: 0.5rem 1.5rem;
-            border-radius: 4px;
-            font-weight: bold;
-            margin-right: 1rem;
-        }
-        
-        .info-btn {
-            background-color: rgba(109, 109, 110, 0.7);
-            color: white;
-            border: none;
-            padding: 0.5rem 1.5rem;
-            border-radius: 4px;
-            font-weight: bold;
-        }
-        
-        @media (max-width: 768px) {
-            .hero-content {
-                max-width: 80%;
-                padding-left: 2rem;
-            }
-            
-            .movie-card {
-                width: 150px;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="bg-black">
     <nav class="navbar navbar-expand-lg navbar-dark py-3">
@@ -215,13 +32,13 @@
     <!-- Hero Banner -->
     <section class="hero-banner" style="background-image: url('https://image.tmdb.org/t/p/original/9Gtg2DzBhmYamXBS1hKAhiwbBKS.jpg')">
         <div class="hero-content">
-            <h1 class="display-4 fw-bold mb-3">Scarlet Witch</h1>
+            <h1 class="display-4 fw-bold mb-3">Stranger Things</h1>
             <div class="d-flex mb-3">
                 <span class="genre-tag">Sci-Fi</span>
-                <span class="genre-tag">Action</span>
+                <span class="genre-tag">Horror</span>
                 <span class="genre-tag">Drama</span>
             </div>
-            <p class="mb-4">When a powerful sorceress is hunted, the world uncovers a mystery involving forbidden magic, dark forces, and a woman who can reshape reality itself.</p>
+            <p class="mb-4">When a young boy vanishes, a small town uncovers a mystery involving secret experiments, terrifying supernatural forces and one strange little girl.</p>
             <div>
                 <button class="play-btn"><i class="fas fa-play me-2"></i>Play</button>
                 <button class="info-btn"><i class="fas fa-info-circle me-2"></i>More Info</button>
@@ -240,76 +57,7 @@
                 </div>
             </div>
             <div class="scroll-row" id="popular-row">
-                <div class="movie-card">
-                    <img src="https://image.tmdb.org/t/p/w500/1g0dhYtq4irTY1GPXvft6k4YLjm.jpg" class="img-fluid" alt="Movie 1">
-                    <div class="card-body">
-                        <h5 class="card-title">Spider-Man: No Way Home</h5>
-                        <div class="d-flex">
-                            <span class="badge bg-warning text-dark me-2">8.2</span>
-                            <span class="text-muted">2021</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="movie-card">
-                    <img src="https://image.tmdb.org/t/p/w500/74xTEgt7R36Fpooo50r9T25onhq.jpg" class="img-fluid" alt="Movie 2">
-                    <div class="card-body">
-                        <h5 class="card-title">The Batman</h5>
-                        <div class="d-flex">
-                            <span class="badge bg-warning text-dark me-2">7.9</span>
-                            <span class="text-muted">2022</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="movie-card">
-                    <img src="https://image.tmdb.org/t/p/w500/qAZ0pzat24kLdO3o8ejmbLxyOac.jpg" class="img-fluid" alt="Movie 3">
-                    <div class="card-body">
-                        <h5 class="card-title">Black Widow</h5>
-                        <div class="d-flex">
-                            <span class="badge bg-warning text-dark me-2">6.7</span>
-                            <span class="text-muted">2021</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="movie-card">
-                    <img src="https://image.tmdb.org/t/p/w500/6DrHO1jr3qVrViUO6s6kFiAGM7.jpg" class="img-fluid" alt="Movie 4">
-                    <div class="card-body">
-                        <h5 class="card-title">Sonic 2</h5>
-                        <div class="d-flex">
-                            <span class="badge bg-warning text-dark me-2">7.5</span>
-                            <span class="text-muted">2021</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="movie-card">
-                    <img src="/Streamflix-project/Streamflix/images/matrixxmovie.jpg" class="img-fluid" alt="Movie 5">
-                    <div class="card-body">
-                        <h5 class="card-title">The Matrix Resurrections</h5>
-                        <div class="d-flex">
-                            <span class="badge bg-warning text-dark me-2">6.3</span>
-                            <span class="text-muted">2021</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="movie-card">
-                    <img src="https://image.tmdb.org/t/p/w500/1uegR4uAxRxiMyX4nQnpzbXhrTw.jpg" class="img-fluid" alt="Movie 6">
-                    <div class="card-body">
-                        <h5 class="card-title">Venom 2</h5>
-                        <div class="d-flex">
-                            <span class="badge bg-warning text-dark me-2">6.8</span>
-                            <span class="text-muted">2021</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="movie-card">
-                    <img src="https://image.tmdb.org/t/p/w500/3G1Q5xF40HkUBJXxt2DQgQzKTp5.jpg" class="img-fluid" alt="Movie 7">
-                    <div class="card-body">
-                        <h5 class="card-title">Dune</h5>
-                        <div class="d-flex">
-                            <span class="badge bg-warning text-dark me-2">7.9</span>
-                            <span class="text-muted">2021</span>
-                        </div>
-                    </div>
-                </div>
+                <!-- Movie cards will be dynamically generated here -->
             </div>
         </section>
 
@@ -323,139 +71,58 @@
                 </div>
             </div>
             <div class="scroll-row" id="continue-row">
-                <div class="movie-card">
-                    <img src="https://image.tmdb.org/t/p/w500/6kbAMLteGO8yyewYau6bJ683sw7.jpg" class="img-fluid" alt="Continue 1">
-                    <div class="progress position-absolute bottom-0 start-0 w-100" style="height: 5px;">
-                        <div class="progress-bar bg-danger" style="width: 65%"></div>
-                    </div>
-                    <div class="card-body">
-                        <h5 class="card-title">The Falcon & Winter Soldier</h5>
-                        <div class="d-flex">
-                            <span class="badge bg-warning text-dark me-2">8.0</span>
-                            <span class="text-muted">S2:E3</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="movie-card">
-                    <img src="https://image.tmdb.org/t/p/w500/6UH52Fmau8RPsMAbQbjwN3wJSCj.jpg" class="img-fluid" alt="Continue 2">
-                    <div class="progress position-absolute bottom-0 start-0 w-100" style="height: 5px;">
-                        <div class="progress-bar bg-danger" style="width: 30%"></div>
-                    </div>
-                    <div class="card-body">
-                        <h5 class="card-title">Arcane</h5>
-                        <div class="d-flex">
-                            <span class="badge bg-warning text-dark me-2">9.1</span>
-                            <span class="text-muted">E4</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="movie-card">
-                    <img src="https://image.tmdb.org/t/p/w500/9yxep7oJdkj3Pla9TD9gKflRApY.jpg" class="img-fluid" alt="Continue 3">
-                    <div class="progress position-absolute bottom-0 start-0 w-100" style="height: 5px;">
-                        <div class="progress-bar bg-danger" style="width: 80%"></div>
-                    </div>
-                    <div class="card-body">
-                        <h5 class="card-title">Jupiter's Legacy</h5>
-                        <div class="d-flex">
-                            <span class="badge bg-warning text-dark me-2">8.3</span>
-                            <span class="text-muted">S5:E5</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="movie-card">
-                    <img src="https://image.tmdb.org/t/p/w500/6f9uCfMAWMCgL2a6YlQqsnqTMz9.jpg" class="img-fluid" alt="Continue 4">
-                    <div class="progress position-absolute bottom-0 start-0 w-100" style="height: 5px;">
-                        <div class="progress-bar bg-danger" style="width: 45%"></div>
-                    </div>
-                    <div class="card-body">
-                        <h5 class="card-title">The Queen's Gambit</h5>
-                        <div class="d-flex">
-                            <span class="badge bg-warning text-dark me-2">8.6</span>
-                            <span class="text-muted">E3</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="movie-card">
-                    <img src="https://image.tmdb.org/t/p/w500/6UH52Fmau8RPsMAbQbjwN3wJSCj.jpg" class="img-fluid" alt="Continue 5">
-                    <div class="progress position-absolute bottom-0 start-0 w-100" style="height: 5px;">
-                        <div class="progress-bar bg-danger" style="width: 20%"></div>
-                    </div>
-                    <div class="card-body">
-                        <h5 class="card-title">Squid Game</h5>
-                        <div class="d-flex">
-                            <span class="badge bg-warning text-dark me-2">8.0</span>
-                            <span class="text-muted">E2</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Trending Now -->
-        <section class="row-container mb-5">
-            <div class="row-header">
-                <h2 class="section-title">Trending Now</h2>
-                <div>
-                    <button class="btn btn-sm btn-outline-secondary scroll-left"><i class="fas fa-chevron-left"></i></button>
-                    <button class="btn btn-sm btn-outline-secondary scroll-right"><i class="fas fa-chevron-right"></i></button>
-                </div>
-            </div>
-            <div class="scroll-row" id="trending-row">
-                <div class="movie-card">
-                    <img src="https://image.tmdb.org/t/p/w500/1g0dhYtq4irTY1GPXvft6k4YLjm.jpg" class="img-fluid" alt="Trending 1">
-                    <div class="card-body">
-                        <h5 class="card-title">Spider-Man: No Way Home</h5>
-                        <div class="d-flex">
-                            <span class="badge bg-warning text-dark me-2">8.2</span>
-                            <span class="text-muted">2021</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="movie-card">
-                    <img src="https://image.tmdb.org/t/p/w500/74xTEgt7R36Fpooo50r9T25onhq.jpg" class="img-fluid" alt="Trending 2">
-                    <div class="card-body">
-                        <h5 class="card-title">The Batman</h5>
-                        <div class="d-flex">
-                            <span class="badge bg-warning text-dark me-2">7.9</span>
-                            <span class="text-muted">2022</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="movie-card">
-                    <img src="https://image.tmdb.org/t/p/w500/qAZ0pzat24kLdO3o8ejmbLxyOac.jpg" class="img-fluid" alt="Trending 3">
-                    <div class="card-body">
-                        <h5 class="card-title">Black Widow</h5>
-                        <div class="d-flex">
-                            <span class="badge bg-warning text-dark me-2">6.7</span>
-                            <span class="text-muted">2021</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="movie-card">
-                    <img src="https://image.tmdb.org/t/p/w500/6DrHO1jr3qVrViUO6s6kFiAGM7.jpg" class="img-fluid" alt="Trending 4">
-                    <div class="card-body">
-                        <h5 class="card-title">Sonic 2</h5>
-                        <div class="d-flex">
-                            <span class="badge bg-warning text-dark me-2">7.5</span>
-                            <span class="text-muted">2021</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="movie-card">
-                    <img src="https://image.tmdb.org/t/p/w500/8Y43POKjjKDGI9MH89NW0NAzzp8.jpg" class="img-fluid" alt="Trending 5">
-                    <div class="card-body">
-                        <h5 class="card-title">The Matrix Resurrections</h5>
-                        <div class="d-flex">
-                            <span class="badge bg-warning text-dark me-2">6.3</span>
-                            <span class="text-muted">2021</span>
-                        </div>
-                    </div>
-                </div>
+                <!-- Movie cards will be dynamically generated here -->
             </div>
         </section>
     </main>
 
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-links">
+                <div class="footer-column">
+                    <ul>
+                        <li><a href="#">Audio Description</a></li>
+                        <li><a href="#">Investor Relations</a></li>
+                        <li><a href="#">Legal Notices</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Jobs</a></li>
+                        <li><a href="#">Cookie Preferences</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <ul>
+                        <li><a href="#">Gift Cards</a></li>
+                        <li><a href="#">Terms of Use</a></li>
+                        <li><a href="#">Corporate Information</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <ul>
+                        <li><a href="#">Media Center</a></li>
+                        <li><a href="#">Privacy</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 StreamFlix, Inc.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/auth.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const user = JSON.parse(sessionStorage.getItem('current_user'));
@@ -468,15 +135,6 @@
                 e.preventDefault();
                 sessionStorage.removeItem('current_user');
                 window.location.href = 'index.html';
-            });
-
-            // Navbar scroll effect
-            window.addEventListener('scroll', function() {
-                if (window.scrollY > 50) {
-                    document.querySelector('.navbar').classList.add('scrolled');
-                } else {
-                    document.querySelector('.navbar').classList.remove('scrolled');
-                }
             });
 
             // Horizontal scrolling for rows
@@ -493,6 +151,48 @@
                     row.scrollBy({ left: 300, behavior: 'smooth' });
                 });
             });
+
+            const popularMovies = [
+                { title: "Spider-Man: No Way Home", poster: "https://image.tmdb.org/t/p/w500/1g0dhYtq4irTY1GPXvft6k4YLjm.jpg", rating: "8.2", year: "2021" },
+                { title: "The Batman", poster: "https://image.tmdb.org/t/p/w500/74xTEgt7R36Fpooo50r9T25onhq.jpg", rating: "8.0", year: "2022" },
+                { title: "Dune", poster: "https://image.tmdb.org/t/p/w500/8c4a8kE7PizaGQQnditMmI1xbRp.jpg", rating: "8.1", year: "2021" },
+                { title: "Black Widow", poster: "https://image.tmdb.org/t/p/w500/qAZ0pzat24kLdO3o8ejmbLxyOac.jpg", rating: "7.3", year: "2021" },
+                { title: "Shang-Chi", poster: "https://image.tmdb.org/t/p/w500/1BIoJGKbXjdFDAqUEiA2VHqkK1Z.jpg", rating: "7.9", year: "2021" }
+            ];
+
+            const continueWatching = [
+                { title: "The Witcher", poster: "https://image.tmdb.org/t/p/w500/6kbAMLteGO8yyewYau6bJ683sw7.jpg", progress: 65, season: "S2:E3" },
+                { title: "Stranger Things", poster: "https://image.tmdb.org/t/p/w500/x2LSRK2Cm7MZhjluni1msVJ3wDF.jpg", progress: 45, season: "S4:E5" },
+                { title: "Breaking Bad", poster: "https://image.tmdb.org/t/p/w500/ggFHVNu6YYI5L9pCfOacjizRGt.jpg", progress: 80, season: "S3:E7" }
+            ];
+
+            function generateMovieCards(movies, containerId, isContinueWatching = false) {
+                const container = document.getElementById(containerId);
+                container.innerHTML = '';
+                movies.forEach(movie => {
+                    const card = document.createElement('div');
+                    card.className = 'movie-card';
+                    card.innerHTML = `
+                        <img src="${movie.poster}" class="img-fluid" alt="${movie.title}">
+                        ${isContinueWatching ? `
+                            <div class="progress position-absolute bottom-0 start-0 w-100" style="height: 5px;">
+                                <div class="progress-bar bg-danger" style="width: ${movie.progress}%"></div>
+                            </div>` : ''}
+                        <div class="card-body">
+                            <h5 class="card-title">${movie.title}</h5>
+                            <div class="d-flex">
+                                ${isContinueWatching ? `<span class="text-muted">${movie.season}</span>` : `
+                                    <span class="badge bg-warning text-dark me-2">${movie.rating}</span>
+                                    <span class="text-muted">${movie.year}</span>`}
+                            </div>
+                        </div>
+                    `;
+                    container.appendChild(card);
+                });
+            }
+
+            generateMovieCards(popularMovies, 'popular-row');
+            generateMovieCards(continueWatching, 'continue-row', true);
         });
     </script>
 </body>

@@ -1,59 +1,16 @@
-/* Background with your image */
-.welcome-page {
-    background: url('../images/NL-nl-20250317-TRIFECTA-perspective_dd6c75eb-e52d-42ce-abe5-dd9a51c86911_large.jpg') no-repeat center center fixed;
-    background-size: cover;
-    min-height: 70vh;
-    position: relative;
-    margin-top: -68px;
-    display: flex;
-    align-items: center;
+:root {
+    --netflix-red: #e50914;
+    --netflix-dark: #141414;
+    --netflix-gray: #303030;
+    --netflix-light-gray: #737373;
 }
 
-/* Overlay */
-.hero-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.8) 100%);
-}
-
-/* Content positioning */
-.hero-content {
-    position: relative;
-    z-index: 1;
-    padding-left: 4rem;
-    max-width: 40%;
-}
-
-/* Form styling */
-.form-control {
-    background-color: rgba(0, 0, 0, 0.7);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+body {
+    background-color: var(--netflix-dark);
     color: white;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
-.form-control:focus {
-    background-color: rgba(0, 0, 0, 0.8);
-    color: white;
-    box-shadow: none;
-    border-color: rgba(255, 255, 255, 0.4);
-}
-
-/* Button styling */
-.btn-danger {
-    background-color: #e50914;
-    border-color: #e50914;
-}
-
-.btn-danger:hover {
-    background-color: #f40612;
-    border-color: #f40612;
-}
-
-/* Navbar */
 .navbar {
     background: linear-gradient(to bottom, rgba(0,0,0,0.7) 10%, rgba(0,0,0,0));
     position: fixed;
@@ -64,10 +21,41 @@
 }
 
 .navbar.scrolled {
-    background-color: #141414;
+    background-color: var(--netflix-dark);
 }
 
-/* Movie rows */
+.hero-banner {
+    height: 70vh;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-top: -68px;
+}
+
+.hero-banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to top, var(--netflix-dark) 0%, transparent 50%);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    padding-left: 4rem;
+    max-width: 40%;
+}
+
+.section-title {
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
 .row-container {
     position: relative;
     margin-bottom: 3rem;
@@ -77,11 +65,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 1rem;
-}
-
-.section-title {
-    font-weight: bold;
     margin-bottom: 1rem;
 }
 
@@ -132,17 +115,48 @@
     opacity: 1;
 }
 
-/* Genre tags */
+.scroll-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.5);
+    border: none;
+    color: white;
+    width: 40px;
+    height: 100px;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.scroll-btn.left {
+    left: 0;
+    border-radius: 0 4px 4px 0;
+}
+
+.scroll-btn.right {
+    right: 0;
+    border-radius: 4px 0 0 4px;
+}
+
+.scroll-btn:hover {
+    background: rgba(0,0,0,0.7);
+}
+
 .genre-tag {
-    background-color: #e50914;
+    background-color: var(--netflix-red);
     padding: 0.2rem 0.5rem;
     border-radius: 3px;
     font-size: 0.8rem;
     margin-right: 0.5rem;
 }
 
-/* Buttons */
 .play-btn {
+    background-color: white;
+    color: black;
+    border: none;
     padding: 0.5rem 1.5rem;
     border-radius: 4px;
     font-weight: bold;
@@ -158,29 +172,83 @@
     font-weight: bold;
 }
 
-/* Responsive adjustments */
+/* Footer Styles */
+.site-footer {
+    background-color: var(--netflix-dark);
+    color: var(--netflix-light-gray);
+    padding: 50px 0 20px;
+    border-top: 1px solid var(--netflix-gray);
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.footer-column {
+    flex: 0 0 25%;
+    margin-bottom: 20px;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column li {
+    margin-bottom: 15px;
+}
+
+.footer-column a {
+    color: var(--netflix-light-gray);
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.footer-column a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+    font-size: 13px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 20px;
+}
+
 @media (max-width: 768px) {
     .hero-content {
         max-width: 80%;
         padding-left: 2rem;
-        padding-top: 5rem;
-    }
-    
-    .display-3 {
-        font-size: 2.5rem;
-    }
-    
-    .input-group {
-        flex-direction: column;
-    }
-    
-    .input-group .form-control,
-    .input-group .btn {
-        width: 100%;
-        margin-bottom: 10px;
     }
     
     .movie-card {
         width: 150px;
+    }
+    
+    .footer-column {
+        flex: 0 0 50%;
+    }
+    
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .social-icons {
+        margin-top: 15px;
     }
 }
