@@ -9,6 +9,7 @@ body {
     background-color: var(--netflix-dark);
     color: white;
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    padding-top: 70px; /* Adjust this value to match the height of the header */
 }
 
 .navbar {

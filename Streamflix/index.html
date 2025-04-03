@@ -7,21 +7,29 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        body.welcome-page {
+            background: url('./images/NL-nl-20250317-TRIFECTA-perspective_dd6c75eb-e52d-42ce-abe5-dd9a51c86911_large.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+    </style>
 </head>
 <body class="welcome-page">
+    <header>
+        <nav class="navbar navbar-dark">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" height="40" alt="Streamflix">
+                </a>
+                <div>
+                    <a href="auth.html?action=login" class="btn btn-danger">Aanmelden</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
     <div class="hero-overlay"></div>
     
-    <nav class="navbar navbar-dark">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" height="40" alt="Streamflix">
-            </a>
-            <div>
-                <a href="auth.html?action=login" class="btn btn-danger">Aanmelden</a>
-            </div>
-        </div>
-    </nav>
-
     <main class="container text-center text-white hero-content">
         <h1 class="display-3 fw-bold mb-4">Onbeperkt series, films en nog veel meer kijken</h1>
         <p class="h4 mb-5">Vanaf € 8,99. Je kunt altijd opzeggen.</p>
@@ -38,5 +46,45 @@
             </div>
         </div>
     </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-links">
+                <div class="footer-column">
+                    <ul>
+                        <li><a href="#">Veelgestelde vragen</a></li>
+                        <li><a href="#">Helpcentrum</a></li>
+                        <li><a href="#">Account</a></li>
+                        <li><a href="#">Media Center</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <ul>
+                        <li><a href="#">Investeerdersrelaties</a></li>
+                        <li><a href="#">Vacatures</a></li>
+                        <li><a href="#">Gebruiksvoorwaarden</a></li>
+                        <li><a href="#">Privacy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <ul>
+                        <li><a href="#">Cookievoorkeuren</a></li>
+                        <li><a href="#">Bedrijfsgegevens</a></li>
+                        <li><a href="#">Contact opnemen</a></li>
+                        <li><a href="#">Snelkoppelingen</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Streamflix. Alle rechten voorbehouden.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
