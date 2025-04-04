@@ -29,14 +29,12 @@
     </header>
 
     <div class="hero-overlay"></div>
-    
-    <main class="container text-center text-white hero-content">
+    <main class="container text-center text-white hero-content" style="background: transparent;">
         <h1 class="display-3 fw-bold mb-4">Onbeperkt series, films en nog veel meer kijken</h1>
-        <p class="h4 mb-5">Vanaf € 8,99. Je kunt altijd opzeggen.</p>
+        <p class="h4 mb-5">Vanaf € 7,99. Je kunt altijd opzeggen.</p>
         <p class="h5 mb-4">Klaar om te kijken? Voer je e-mailadres in om je lidmaatschap te starten of te hernieuwen.</p>
-        
         <div class="row justify-content-center">
-            <div class="col-md-8 col-lg-6">
+            <div class="col-md-10 col-lg-10"> <!-- Adjusted column width -->
                 <div class="input-group mb-3">
                     <input type="email" class="form-control form-control-lg" placeholder="E-mailadres">
                     <a href="auth.html" class="btn btn-danger btn-lg">
@@ -46,6 +44,146 @@
             </div>
         </div>
     </main>
+
+    <div style="background-color: var(--netflix-dark); margin-top: 10%;">
+        <div class="container text-center text-white">
+            <h2 class="display-4 fw-bold">Kijk waar en wanneer je maar wilt</h2>
+            <p class="h5">Stream op je tv, laptop, smartphone of tablet.</p>
+            <img src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/device-pile.png" " alt="Streamflix devices" class="img-fluid mt-4">
+        </div>
+    </div>
+
+    <div style="background-color: var(--netflix-dark);">
+        <div class="container text-center text-white">
+            <h2 class="display-4 fw-bold">Populaire categorieën</h2>
+            <div class="row mt-4">
+                <div class="col-md-4">
+                    <div class="card bg-dark text-white">
+                        <img src="images/squidgamemovie.jpg" class="card-img-top" alt="Actie">
+                        <div class="card-body">
+                            <h5 class="card-title">Actie</h5>
+                            <p class="card-text">Adrenaline-pompende films en series.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card bg-dark text-white">
+                        <img src="images/venom2movie.png" class="card-img-top" alt="Komedie">
+                        <div class="card-body">
+                            <h5 class="card-title">Komedie</h5>
+                            <p class="card-text">Lachen gegarandeerd met deze selectie.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card bg-dark text-white">
+                        <img src="images/queensgambitmovie.jpg" class="card-img-top" alt="Drama">
+                        <div class="card-body">
+                            <h5 class="card-title">Drama</h5>
+                            <p class="card-text">Verhalen die je raken en inspireren.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div style="background-color: var(--netflix-dark);">
+        <div class="container text-center text-white">
+            <h2 class="display-4 fw-bold">Wat onze gebruikers zeggen</h2>
+            <div class="row mt-4">
+                <div class="col-md-4">
+                    <blockquote class="blockquote">
+                        <img src="images/profiles/testimonials-1.jpg" class="rounded-circle mb-3 testimonial-img" alt="User 1">
+                        <p>"Streamflix heeft mijn avonden veranderd. Geweldige content!"</p>
+                        <footer class="blockquote-footer text-white">Jan de Vries</footer>
+                    </blockquote>
+                </div>
+                <div class="col-md-4">
+                    <blockquote class="blockquote">
+                        <img src="images/profiles/testimonials-2.jpg" class="rounded-circle mb-3 testimonial-img" alt="User 2">
+                        <p>"Ik kan niet meer zonder Streamflix. Altijd iets nieuws te kijken."</p>
+                        <footer class="blockquote-footer text-white">Sanne Jansen</footer>
+                    </blockquote>
+                </div>
+                <div class="col-md-4">
+                    <blockquote class="blockquote">
+                        <img src="images/profiles/testimonials-3.jpg" class="rounded-circle mb-3 testimonial-img" alt="User 3">
+                        <p>"De beste streamingdienst die er is. Aanrader!"</p>
+                        <footer class="blockquote-footer text-white">Pieter van Dijk</footer>
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div style="background-color: var(--netflix-dark);">
+        <div class="container text-center text-white">
+            <h2 class="display-4 fw-bold">Veelgestelde vragen</h2>
+            <div class="accordion mt-4" id="faqAccordion">
+                <div class="accordion-item bg-dark text-white">
+                    <h2 class="accordion-header" id="faqHeadingOne">
+                        <button class="accordion-button bg-dark text-white collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseOne">
+                            Wat is Streamflix?
+                        </button>
+                    </h2>
+                    <div id="faqCollapseOne" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Streamflix is een streamingdienst waarmee je onbeperkt films, series en meer kunt kijken, zonder advertenties.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item bg-dark text-white">
+                    <h2 class="accordion-header" id="faqHeadingTwo">
+                        <button class="accordion-button bg-dark text-white collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseTwo">
+                            Hoeveel kost Streamflix?
+                        </button>
+                    </h2>
+                    <div id="faqCollapseTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Streamflix biedt verschillende abonnementen vanaf €7,99 per maand. Je kunt op elk moment opzeggen.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item bg-dark text-white">
+                    <h2 class="accordion-header" id="faqHeadingThree">
+                        <button class="accordion-button bg-dark text-white collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseThree">
+                            Waar kan ik kijken?
+                        </button>
+                    </h2>
+                    <div id="faqCollapseThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Je kunt Streamflix kijken op je tv, laptop, smartphone of tablet. Download de app of kijk via je browser.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div style="background-color: var(--netflix-dark);">
+        <div class="container text-center text-white">
+            <h2 class="display-4 fw-bold">Contact en Support</h2>
+            <p class="h5 mt-3">Heb je vragen of hulp nodig? Neem contact met ons op via onderstaande opties:</p>
+            <div class="row mt-4">
+                <div class="col-md-4">
+                    <i class="fas fa-envelope fa-3x text-danger mb-3"></i>
+                    <h5>Email</h5>
+                    <p>Stuur ons een e-mail op <a href="mailto:support@streamflix.com" class="text-danger">support@streamflix.com</a></p>
+                </div>
+                <div class="col-md-4">
+                    <i class="fas fa-phone fa-3x text-danger mb-3"></i>
+                    <h5>Telefoon</h5>
+                    <p>Bel ons op <a href="tel:+31234567890" class="text-danger">+31 234 567 890</a></p>
+                </div>
+                <div class="col-md-4">
+                    <i class="fas fa-comments fa-3x text-danger mb-3"></i>
+                    <h5>Live Chat</h5>
+                    <p>Chat met ons via de <a href="#" class="text-danger">supportpagina</a>.</p>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <footer class="site-footer">
         <div class="container">
@@ -77,6 +215,7 @@
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2023 Streamflix. Alle rechten voorbehouden.</p>
+                <p>Heeft u nog vragen? <a href="mailto:juridisch@streamflix.com" class="text-danger">Neem contact met ons op</a></p>
                 <div class="social-icons">
                     <a href="#"><i class="fab fa-facebook-f"></i></a>
                     <a href="#"><i class="fab fa-twitter"></i></a>
@@ -86,5 +225,32 @@
             </div>
         </div>
     </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 100) {
+                document.querySelector('.navbar').classList.add('scrolled');
+            } else {
+                document.querySelector('.navbar').classList.remove('scrolled');
+            }
+        });
+
+        // Legal Navigation Interaction
+        document.querySelectorAll('.legal-nav a').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelectorAll('.legal-nav a').forEach(navLink => {
+                    navLink.classList.remove('active');
+                });
+                this.classList.add('active');
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
 </html>
