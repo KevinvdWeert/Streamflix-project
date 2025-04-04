@@ -17,43 +17,41 @@
         </div>
     </nav>
 
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-6 col-lg-5">
-                <div class="auth-card">
-                    <!-- Login Form -->
-                    <div id="loginFormContainer">
-                        <h2>Sign In</h2>
-                        <form id="loginForm">
-                            <div class="mb-3">
-                                <input type="email" id="loginEmail" class="form-control" placeholder="Email" required>
-                            </div>
-                            <div class="mb-3">
-                                <input type="password" id="loginPassword" class="form-control" placeholder="Password" required>
-                            </div>
-                            <button type="submit" class="btn btn-danger w-100">Sign In</button>
-                        </form>
-                        <p class="text-center mt-3">New to Streamflix? <a href="#" id="showSignup">Sign up now</a></p>
-                    </div>
+    <div class="container d-flex justify-content-center align-items-center vh-100">
+        <div class="col-md-5 col-lg-5">
+            <div class="auth-card">
+                <!-- Login Form -->
+                <div id="loginFormContainer">
+                    <h2>Sign In</h2>
+                    <form id="loginForm">
+                        <div class="mb-3">
+                            <input type="email" id="loginEmail" class="form-control" placeholder="Email" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="password" id="loginPassword" class="form-control" placeholder="Password" required>
+                        </div>
+                        <button type="submit" class="btn btn-danger w-100">Sign In</button>
+                    </form>
+                    <p class="text-center mt-3">New to Streamflix? <a href="#" id="showSignup">Sign up now</a></p>
+                </div>
 
-                    <!-- Signup Form -->
-                    <div id="signupFormContainer" style="display:none">
-                        <h2>Sign Up</h2>
-                        <form id="signupForm">
-                            <div class="mb-3">
-                                <input type="text" id="signupName" class="form-control" placeholder="Full Name" required>
-                            </div>
-                            <div class="mb-3">
-                                <input type="email" id="signupEmail" class="form-control" placeholder="Email" required>
-                            </div>
-                            <div class="mb-3">
-                                <input type="password" id="signupPassword" class="form-control" placeholder="Password" required>
-                                <div class="password-strength mt-2"></div>
-                            </div>
-                            <button type="submit" class="btn btn-danger w-100">Sign Up</button>
-                        </form>
-                        <p class="text-center mt-3">Already have an account? <a href="#" id="showLogin">Sign in</a></p>
-                    </div>
+                <!-- Signup Form -->
+                <div id="signupFormContainer" style="display:none">
+                    <h2>Sign Up</h2>
+                    <form id="signupForm">
+                        <div class="mb-3">
+                            <input type="text" id="signupName" class="form-control" placeholder="Full Name" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="email" id="signupEmail" class="form-control" placeholder="Email" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="password" id="signupPassword" class="form-control" placeholder="Password" required>
+                            <div class="password-strength mt-2"></div>
+                        </div>
+                        <button type="submit" class="btn btn-danger w-100">Sign Up</button>
+                    </form>
+                    <p class="text-center mt-3">Already have an account? <a href="#" id="showLogin">Sign in</a></p>
                 </div>
             </div>
         </div>
