@@ -21,30 +21,93 @@
     </nav>
 
     <main class="container py-5">
-        <div class="row justify-content-center">
-            <div class="col-md-6">
-                <div class="card bg-dark p-4">
-                    <h2 class="text-center mb-4">Your Profile</h2>
-                    <div id="profileInfo">
-                        <div class="text-center mb-4">
-                            <i class="fas fa-user-circle fa-5x"></i>
-                        </div>
-                        <div class="mb-3">
-                            <label class="form-label">Name</label>
-                            <input type="text" class="form-control bg-secondary text-white" id="profileName" readonly>
-                        </div>
-                        <div class="mb-3">
-                            <label class="form-label">Email</label>
-                            <input type="email" class="form-control bg-secondary text-white" id="profileEmail" readonly>
-                        </div>
-                        <div class="mb-3">
-                            <label class="form-label">Member Since</label>
-                            <input type="text" class="form-control bg-secondary text-white" id="memberSince" readonly>
-                        </div>
-                    </div>
+        <div class="profile-dashboard">
+            <!-- User Information Section -->
+            <section class="user-info">
+                <h2>User Information</h2>
+                <p><strong>Name:</strong> <span id="profileName"></span></p>
+                <p><strong>Email:</strong> <span id="profileEmail"></span></p>
+                <button id="editInfoBtn">Edit Information</button>
+            </section>
+
+            <!-- Recent Activity Section -->
+            <section class="recent-activity">
+                <h2>Recent Activity</h2>
+                <ul id="recentActivity">
+                    <li>Watched "Breaking Bad" on 2023-10-01</li>
+                    <li>Added "Stranger Things" to Watchlist on 2023-09-30</li>
+                    <li>Rated "The Crown" 4 stars on 2023-09-29</li>
+                    <li>Watched "The Witcher" on 2023-09-28</li>
+                    <li>Started watching "Money Heist" on 2023-09-27</li>
+                </ul>
+            </section>
+
+            <!-- Account Settings Section -->
+            <section class="account-settings">
+                <h2>Account Settings</h2>
+                <button id="changePasswordBtn">Change Password</button>
+                <a href="subscription.html" class="btn btn-primary" id="manageSubscriptionsBtn">Manage Subscriptions</a>
+                <button id="deleteAccountBtn">Delete Account</button>
+            </section>
+        </div>
+
+        <!-- Subscription Section -->
+        <section class="pricing-container">
+            <h1 class="pricing-title">Onze abonnementen</h1>
+            <p class="pricing-subtitle">Kies het perfecte abonnement voor jouw kijkplezier</p>
+            
+            <div class="toggle-container">
+                <span class="toggle-label">Maandelijks</span>
+                <label class="toggle-switch">
+                    <input type="checkbox" id="billingToggle">
+                    <span class="slider"></span>
+                </label>
+                <span class="toggle-label">Jaarlijks <span class="savings-badge">Bespaar tot 20%</span></span>
+            </div>
+            
+            <div class="pricing-cards">
+                <div class="pricing-card">
+                    <h3 class="pricing-card-title">Student</h3>
+                    <div class="pricing-card-price monthly-price">€7,99 <span class="period">/maand</span></div>
+                    <div class="pricing-card-price yearly-price" style="display:none">€79,99 <span class="period">/jaar</span></div>
+                    <ul class="pricing-card-features">
+                        <li>HD-kwaliteit</li>
+                        <li>1 scherm tegelijk</li>
+                        <li>Speciale studentenverificatie</li>
+                        <li>Opzeggen wanneer je wilt</li>
+                        <li>Geen reclame</li>
+                    </ul>
+                    <button class="btn-pricing">Kies Student</button>
+                </div>
+                <div class="pricing-card popular">
+                    <div class="popular-badge">Meest populair</div>
+                    <h3 class="pricing-card-title">Standaard</h3>
+                    <div class="pricing-card-price monthly-price">€12,99 <span class="period">/maand</span></div>
+                    <div class="pricing-card-price yearly-price" style="display:none">€119,99 <span class="period">/jaar</span></div>
+                    <ul class="pricing-card-features">
+                        <li>Full HD-kwaliteit</li>
+                        <li>2 schermen tegelijk</li>
+                        <li>Onbeperkt films en series</li>
+                        <li>Downloaden op 2 apparaten</li>
+                        <li>Geen reclame</li>
+                    </ul>
+                    <button class="btn-pricing">Kies Standaard</button>
+                </div>
+                <div class="pricing-card">
+                    <h3 class="pricing-card-title">Familie</h3>
+                    <div class="pricing-card-price monthly-price">€17,99 <span class="period">/maand</span></div>
+                    <div class="pricing-card-price yearly-price" style="display:none">€159,99 <span class="period">/jaar</span></div>
+                    <ul class="pricing-card-features">
+                        <li>Ultra HD 4K-kwaliteit</li>
+                        <li>4 schermen tegelijk</li>
+                        <li>Gezinsprofielen (max 5)</li>
+                        <li>Downloaden op 6 apparaten</li>
+                        <li>Geen reclame</li>
+                    </ul>
+                    <button class="btn-pricing">Kies Familie</button>
                 </div>
             </div>
-        </div>
+        </section>
     </main>
 
     <script src="js/auth.js"></script>
@@ -55,14 +118,35 @@
                 window.location.href = 'index.html';
                 return;
             }
+
+            // Display logged-in user information
+            document.getElementById('profileName').textContent = user.name || 'N/A';
+            document.getElementById('profileEmail').textContent = user.email || 'N/A';
+
+            // Add event listeners for buttons
+            document.getElementById('editInfoBtn').addEventListener('click', () => {
+                alert('Edit Information feature is under development.');
+            });
+            document.getElementById('changePasswordBtn').addEventListener('click', () => {
+                alert('Change Password feature is under development.');
+            });
+            document.getElementById('deleteAccountBtn').addEventListener('click', () => {
+                if (confirm('Are you sure you want to delete your account?')) {
+                    alert('Account deletion feature is under development.');
+                }
+            });
+        });
+
+        document.getElementById('billingToggle').addEventListener('change', function() {
+            const monthlyPrices = document.querySelectorAll('.monthly-price');
+            const yearlyPrices = document.querySelectorAll('.yearly-price');
             
-            const users = JSON.parse(localStorage.getItem('streamflix_users') || '[]');
-            const userData = users.find(u => u.email === user.email);
-            
-            if (userData) {
-                document.getElementById('profileName').value = userData.name;
-                document.getElementById('profileEmail').value = userData.email;
-                document.getElementById('memberSince').value = new Date(userData.joined).toLocaleDateString();
+            if (this.checked) {
+                monthlyPrices.forEach(el => el.style.display = 'none');
+                yearlyPrices.forEach(el => el.style.display = 'block');
+            } else {
+                monthlyPrices.forEach(el => el.style.display = 'block');
+                yearlyPrices.forEach(el => el.style.display = 'none');
             }
         });
     </script>

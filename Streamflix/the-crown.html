@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Streamflix - The Crown</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body class="bg-black">
+    <nav class="navbar navbar-expand-lg navbar-dark py-3 fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="home.html">
+                <img src="https://vignette2.wikia.nocookie.net/logopedia/images/b/b2/NetflixIcon2016.jpg/revision/latest/scale-to-width-down/2000?cb=20160620223003" height="40" alt="Streamflix">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="profile.html">Profile</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" id="logoutBtn">Sign Out</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Banner -->
+    <section class="hero-banner" style="background-image: url('https://image.tmdb.org/t/p/original/7WJjFviFBffEJkyRAorWHf0E5Kh.jpg')">
+        <div class="hero-content">
+            <img src="https://3.bp.blogspot.com/-dCdYy211MLU/WQnpzEs7cwI/AAAAAAAAAa0/jEzk8PrL3VASXqNFg75Qodu5nKaLUC-AwCLcB/s1600/the-crown-portada.jpg" alt="The Crown" class="title-logo">
+            <div class="d-flex align-items-center mb-3">
+                <span class="match-percentage">96% Match</span>
+                <span class="year-rating">2016</span>
+                <span class="season-count">4 Seasons</span>
+                <span class="hd-badge">HD</span>
+            </div>
+            <div class="mb-4">
+                <span class="genre-tag">Drama</span>
+                <span class="genre-tag">Historical</span>
+                <span class="genre-tag">Political</span>
+            </div>
+            <p>This drama follows the political rivalries and romance of Queen Elizabeth II's reign and the events that shaped the second half of the 20th century.</p>
+            <div>
+                <button class="play-btn"><i class="fas fa-play me-2"></i>Play</button>
+                <button class="info-btn"><i class="fas fa-info-circle me-2"></i>More Info</button>
+            </div>
+        </div>
+    </section>
+
+    <main class="content-details container mt-5">
+        <!-- About Section -->
+        <section class="about-section mb-5">
+            <h2 class="section-title">About The Crown</h2>
+            <div class="row">
+                <div class="col-md-8">
+                    <p>The Crown traces the life of Queen Elizabeth II from her wedding in 1947 through to the present day. The series begins with an inside look at the early reign of the queen, who ascended the throne at age 25 after the death of her father, King George VI. As the decades pass, personal intrigues, romances, and political rivalries are revealed that played a big role in events that shaped the later years of the 20th century.</p>
+                    <p>Created by Peter Morgan, this Netflix original series dramatizes the story of Queen Elizabeth II and the political and personal events that shaped her reign. It's a story of love, betrayal, duty, and sacrifice as the young monarch must navigate a rapidly changing world while maintaining both her dignity and the reputation of the crown.</p>
+                </div>
+                <div class="col-md-4">
+                    <div class="mb-3">
+                        <strong>Creator:</strong> Peter Morgan
+                    </div>
+                    <div class="mb-3">
+                        <strong>Cast:</strong> Claire Foy, Olivia Colman, Imelda Staunton, Matt Smith, Tobias Menzies, Helena Bonham Carter
+                    </div>
+                    <div class="mb-3">
+                        <strong>Genres:</strong> TV Dramas, British, Historical, Political
+                    </div>
+                    <div class="mb-3">
+                        <strong>Maturity Rating:</strong> TV-MA
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cast Section -->
+        <section class="cast-section mb-5">
+            <h2 class="section-title">Cast</h2>
+            <div class="cast-container">
+                <div class="cast-card">
+                    <img src="https://celebmafia.com/wp-content/uploads/2019/01/claire-foy-2019-critics-choice-awards-8.jpg" alt="Claire Foy">
+                    <div class="cast-name">Claire Foy</div>
+                    <div class="cast-character">Queen Elizabeth II</div>
+                </div>
+                <div class="cast-card">
+                    <img src="https://cdn.britannica.com/53/244153-050-19B4BC5D/Olivia-Colman-2022.jpg" alt="Olivia Colman">
+                    <div class="cast-name">Olivia Colman</div>
+                    <div class="cast-character">Queen Elizabeth II</div>
+                </div>
+                <div class="cast-card">
+                    <img src="https://www.film.ru/sites/default/files/people/1575291-2251169.jpg" alt="Matt Smith">
+                    <div class="cast-name">Matt Smith</div>
+                    <div class="cast-character">Prince Philip</div>
+                </div>
+                <div class="cast-card">
+                    <img src="https://th.bing.com/th/id/OSK.fpvLd8TZNf4NN74ppiAU3NDHhEuntfxV7NreZtWkd_0?w=224&h=200&c=7&rs=1&o=6&dpr=2&pid=SANGAM" alt="Vanessa Kirby">
+                    <div class="cast-name">Vanessa Kirby</div>
+                    <div class="cast-character">Princess Margaret</div>
+                </div>
+                <div class="cast-card">
+                    <img src="https://th.bing.com/th/id/OIP.7lMzra9wI4F3DfOASTSPGAHaJ7?rs=1&pid=ImgDetMain" alt="Helena Bonham Carter">
+                    <div class="cast-name">Helena Bonham Carter</div>
+                    <div class="cast-character">Princess Margaret</div>
+                </div>
+                <div class="cast-card">
+                    <img src="https://th.bing.com/th/id/OIP.QLRcFLS11mN6r-bjuZQEswHaLH?rs=1&pid=ImgDetMain" alt="Tobias Menzies">
+                    <div class="cast-name">Tobias Menzies</div>
+                    <div class="cast-character">Prince Philip</div>
+                </div>
+                <div class="cast-card">
+                    <img src="https://th.bing.com/th/id/OIP.LoPgE7b5b9QHBAByxu16VwAAAA?rs=1&pid=ImgDetMain" alt="Josh O'Connor">
+                    <div class="cast-name">Josh O'Connor</div>
+                    <div class="cast-character">Prince Charles</div>
+                </div>
+                <div class="cast-card">
+                    <img src="https://www.gannett-cdn.com/presto/2019/04/09/USAT/5540ea8e-65f7-46c9-ab58-f95ef203816d-Emma_Corrin_Headshot.JPG" alt="Emma Corrin">
+                    <div class="cast-name">Emma Corrin</div>
+                    <div class="cast-character">Diana Spencer</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Episodes Section -->
+        <section class="episodes-section mb-5">
+            <h2 class="section-title">Season 4 Episodes</h2>
+            <div class="episodes-container">
+                <div class="episode-card">
+                    <img src="https://www.justwatch.com/images/backdrop/153907209/s1440/season-4" class="episode-image" alt="Episode 1">
+                    <div class="episode-details">
+                        <div class="episode-number">S4:E1</div>
+                        <h3 class="episode-title">Gold Stick</h3>
+                        <div class="d-flex mb-2">
+                            <span class="year-rating me-2">58m</span>
+                            <span class="hd-badge">HD</span>
+                        </div>
+                        <p class="episode-description">As the 1970s are drawing to a close, Queen Elizabeth and her family find themselves preoccupied with safeguarding the line of succession by securing an appropriate bride for Prince Charles.</p>
+                    </div>
+                </div>
+                <div class="episode-card">
+                    <img src="https://images.immediate.co.uk/production/volatile/sites/7/2020/11/Wardrobe-faux-pas-%E2%80%93-Sophie-Mutevelian-d033145.jpg?quality=90&resize=620%2C413" class="episode-image" alt="Episode 2">
+                    <div class="episode-details">
+                        <div class="episode-number">S4:E2</div>
+                        <h3 class="episode-title">The Balmoral Test</h3>
+                        <div class="d-flex mb-2">
+                            <span class="year-rating me-2">58m</span>
+                            <span class="hd-badge">HD</span>
+                        </div>
+                        <p class="episode-description">Diana spends a weekend at Balmoral, while Margaret Thatcher struggles to connect with the royal family. Charles finds himself torn between duty and love.</p>
+                    </div>
+                </div>
+                <div class="episode-card">
+                    <img src="https://www.thetvaddict.com/wp-content/uploads/2020/09/TheCrown_403_Unit_03527_RT.jpg" class="episode-image" alt="Episode 3">
+                    <div class="episode-details">
+                        <div class="episode-number">S4:E3</div>
+                        <h3 class="episode-title">Fairytale</h3>
+                        <div class="d-flex mb-2">
+                            <span class="year-rating me-2">58m</span>
+                            <span class="hd-badge">HD</span>
+                        </div>
+                        <p class="episode-description">Charles and Diana's wedding captivates the world, but cracks in their marriage begin to show. Thatcher faces increasing pressure at home and abroad.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- More Like This Section -->
+        <section class="more-like-this">
+            <h2 class="section-title">More Like This</h2>
+            <div class="similar-container">
+                <div class="similar-card">
+                    <img src="https://image.tmdb.org/t/p/w300/zU0htwkhNvBQdVSIKB9s6hgVeFK.jpg" alt="The Queen's Gambit">
+                    <div class="similar-title">The Queen's Gambit</div>
+                </div>
+                <div class="similar-card">
+                    <img src="https://th.bing.com/th/id/OIP.8qv8uz5MqJlBHntYXa8RrAHaK9?rs=1&pid=ImgDetMain" alt="Bridgerton">
+                    <div class="similar-title">Bridgerton</div>
+                </div>
+                <div class="similar-card">
+                    <img src="https://www.filmtv.it/imgbank/GALLERYXL/R202003/eg01-1.jpg" alt="The English Game">
+                    <div class="similar-title">The English Game</div>
+                </div>
+                <div class="similar-card">
+                    <img src="https://www.newdvdreleasedates.com/images/posters/large/downton-abbey-2019-20.jpg" alt="Downton Abbey">
+                    <div class="similar-title">Downton Abbey</div>
+                </div>
+                <div class="similar-card">
+                    <img src="https://www.themoviedb.org/t/p/w440_and_h660_face/kSKYp70FGslYY1L02v4NPWVUB7U.jpg" alt="Victoria">
+                    <div class="similar-title">Victoria</div>
+                </div>
+                <div class="similar-card">
+                    <img src="https://www.themoviedb.org/t/p/original/rvh3PaFcjX32DsvvqSamyytGUnQ.jpg" alt="The Last Czars">
+                    <div class="similar-title">The Last Czars</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-links">
+                <div class="footer-column">
+                    <ul>
+                        <li><a href="#">Audio Description</a></li>
+                        <li><a href="#">Investor Relations</a></li>
+                        <li><a href="#">Legal Notices</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Jobs</a></li>
+                        <li><a href="#">Cookie Preferences</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <ul>
+                        <li><a href="#">Gift Cards</a></li>
+                        <li><a href="#">Terms of Use</a></li>
+                        <li><a href="#">Corporate Information</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <ul>
+                        <li><a href="#">Media Center</a></li>
+                        <li><a href="#">Privacy</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 StreamFlix, Inc.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Simulate user check (in a real app, this would check sessionStorage)
+            document.getElementById('logoutBtn').addEventListener('click', function(e) {
+                e.preventDefault();
+                alert('You would be logged out in a real app');
+                // window.location.href = 'index.html';
+            });
+
+            // Add scroll effect to navbar
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 100) {
+                    document.querySelector('.navbar').classList.add('scrolled');
+                } else {
+                    document.querySelector('.navbar').classList.remove('scrolled');
+                }
+            });
+
+            // Make sure all images have proper alt attributes
+            document.querySelectorAll('img').forEach(img => {
+                if (!img.alt) img.alt = 'Streamflix content';
+            });
+        });
+    </script>
+</body>
+</html>

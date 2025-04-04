@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Streamflix - Abonnementen</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-black">
+    <!-- Navigatiebalk -->
+    <nav class="navbar navbar-expand-lg navbar-dark py-3">
+        <div class="container">
+            <a class="navbar-brand" href="home.html">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" height="40" alt="Streamflix">
+            </a>
+            <div class="d-flex align-items-center">
+                <div class="dropdown">
+                    <button class="btn btn-dark dropdown-toggle" type="button" id="profileDropdown" data-bs-toggle="dropdown">
+                        <i class="fas fa-user-circle fs-4"></i>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <li><a class="dropdown-item" href="profile.html"><i class="fas fa-user me-2"></i>Profiel</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#" id="logoutBtn"><i class="fas fa-sign-out-alt me-2"></i>Uitloggen</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero sectie -->
+    <section class="pricing-hero">
+        <div class="container text-center">
+            <h1 class="display-4 fw-bold">Kies het abonnement dat bij je past</h1>
+            <p class="lead">Upgrade, downgrade of zeg op wanneer je maar wilt</p>
+        </div>
+    </section>
+
+    <!-- Hoofdcontent -->
+    <div class="pricing-container">
+        <h1 class="pricing-title">Onze abonnementen</h1>
+        <p class="pricing-subtitle">Kies het perfecte abonnement voor jouw kijkplezier</p>
+        
+        <!-- Maand/jaar toggle -->
+        <div class="toggle-container">
+            <span class="toggle-label">Maandelijks</span>
+            <label class="toggle-switch">
+                <input type="checkbox" id="billingToggle">
+                <span class="slider"></span>
+            </label>
+            <span class="toggle-label">Jaarlijks <span class="savings-badge">Bespaar tot 20%</span></span>
+        </div>
+        
+        <!-- Abonnementskaarten -->
+        <div class="pricing-cards">
+            <!-- Studentabonnement -->
+            <div class="pricing-card">
+                <h3 class="pricing-card-title">Student</h3>
+                <div class="pricing-card-price monthly-price">€7,99 <span class="period">/maand</span></div>
+                <div class="pricing-card-price yearly-price" style="display:none">€79,99 <span class="period">/jaar</span></div>
+                <ul class="pricing-card-features">
+                    <li>HD-kwaliteit</li>
+                    <li>1 scherm tegelijk</li>
+                    <li>Speciale studentenverificatie</li>
+                    <li>Opzeggen wanneer je wilt</li>
+                    <li>Geen reclame</li>
+                </ul>
+                <button class="btn-pricing">Kies Student</button>
+            </div>
+            
+            <!-- Standaardabonnement (populair) -->
+            <div class="pricing-card popular">
+                <div class="popular-badge">Meest populair</div>
+                <h3 class="pricing-card-title">Standaard</h3>
+                <div class="pricing-card-price monthly-price">€12,99 <span class="period">/maand</span></div>
+                <div class="pricing-card-price yearly-price" style="display:none">€119,99 <span class="period">/jaar</span></div>
+                <ul class="pricing-card-features">
+                    <li>Full HD-kwaliteit</li>
+                    <li>2 schermen tegelijk</li>
+                    <li>Onbeperkt films en series</li>
+                    <li>Downloaden op 2 apparaten</li>
+                    <li>Geen reclame</li>
+                </ul>
+                <button class="btn-pricing">Kies Standaard</button>
+            </div>
+            
+            <!-- Familieabonnement -->
+            <div class="pricing-card">
+                <h3 class="pricing-card-title">Familie</h3>
+                <div class="pricing-card-price monthly-price">€17,99 <span class="period">/maand</span></div>
+                <div class="pricing-card-price yearly-price" style="display:none">€159,99 <span class="period">/jaar</span></div>
+                <ul class="pricing-card-features">
+                    <li>Ultra HD 4K-kwaliteit</li>
+                    <li>4 schermen tegelijk</li>
+                    <li>Gezinsprofielen (max 5)</li>
+                    <li>Downloaden op 6 apparaten</li>
+                    <li>Geen reclame</li>
+                </ul>
+                <button class="btn-pricing">Kies Familie</button>
+            </div>
+        </div>
+        
+        <!-- FAQ Sectie -->
+        <div class="faq-section">
+            <h2 class="text-center mb-4">Veelgestelde vragen</h2>
+            
+            <div class="accordion" id="pricingFaq">
+                <div class="accordion-item bg-dark border-secondary mb-2">
+                    <h3 class="accordion-header" id="headingOne">
+                        <button class="accordion-button bg-dark text-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                            Kan ik wisselen tussen abonnementen?
+                        </button>
+                    </h3>
+                    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#pricingFaq">
+                        <div class="accordion-body">
+                            Ja, je kunt op elk moment upgraden of downgraden naar een ander abonnement. De wijziging gaat direct in.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="accordion-item bg-dark border-secondary mb-2">
+                    <h3 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed bg-dark text-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                            Wat zijn de vereisten voor het studentenabonnement?
+                        </button>
+                    </h3>
+                    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#pricingFaq">
+                        <div class="accordion-body">
+                            Je moet ingeschreven staan bij een erkende onderwijsinstelling. We vragen om verificatie via een schoolmail of studentenbewijs.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="accordion-item bg-dark border-secondary">
+                    <h3 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed bg-dark text-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+                            Kan ik op elk moment opzeggen?
+                        </button>
+                    </h3>
+                    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#pricingFaq">
+                        <div class="accordion-body">
+                            Ja, je kunt je abonnement op elk moment opzeggen zonder boete. Je behoudt toegang tot het einde van je betaalde periode.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="site-footer py-4">
+        <div class="container text-center">
+            <p class="mb-2">Volg ons op sociale media</p>
+            <div class="social-icons mb-3">
+                <a href="#" class="text-white mx-2"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="text-white mx-2"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="text-white mx-2"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="text-white mx-2"><i class="fab fa-youtube"></i></a>
+            </div>
+            <p class="text-muted small">&copy; 2025 StreamFlix, Inc. Alle rechten voorbehouden.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 100) {
+                document.querySelector('.navbar').classList.add('scrolled');
+            } else {
+                document.querySelector('.navbar').classList.remove('scrolled');
+            }
+        });
+
+        // Billing toggle
+        document.getElementById('billingToggle').addEventListener('change', function() {
+            const monthlyPrices = document.querySelectorAll('.monthly-price');
+            const yearlyPrices = document.querySelectorAll('.yearly-price');
+            
+            if (this.checked) {
+                monthlyPrices.forEach(el => el.style.display = 'none');
+                yearlyPrices.forEach(el => el.style.display = 'block');
+            } else {
+                monthlyPrices.forEach(el => el.style.display = 'block');
+                yearlyPrices.forEach(el => el.style.display = 'none');
+            }
+        });
+
+        // Logout functionaliteit
+        document.getElementById('logoutBtn').addEventListener('click', function(e) {
+            e.preventDefault();
+            if (confirm('Weet je zeker dat je wilt uitloggen?')) {
+                window.location.href = 'index.html';
+            }
+        });
+    </script>
+</body>
+</html>
